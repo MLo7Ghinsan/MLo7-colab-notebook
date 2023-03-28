@@ -1,2 +1,3 @@
 # MLo7-colab-notebook
-ill be putting my notebooks here
+
+USERS MUST FOLLOW THE TOS OF THE MAIN REPO BASED ON WHATEVER IT'S ABOUT
