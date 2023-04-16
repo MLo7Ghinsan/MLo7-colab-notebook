@@ -1,0 +1,11 @@
+--- utils.py	2023-04-16 18:59:26.663000154 +0800
++++ utils-d.py	2023-04-16 19:01:18.647000161 +0800
+@@ -310,7 +310,7 @@
+   to_del = [os.path.join(path_to_models, fn) for fn in
+             (x_sorted('G')[:-n_ckpts_to_keep] + x_sorted('D')[:-n_ckpts_to_keep])]
+   del_info = lambda fn: logger.info(f".. Free up space by deleting ckpt {fn}")
+-  del_routine = lambda x: [os.remove(x), del_info(x)]
++  del_routine = lambda x: [open(x, 'w').close(), os.remove(x), del_info(x)]
+   rs = [del_routine(fn) for fn in to_del]
+ 
+ def summarize(writer, global_step, scalars={}, histograms={}, images={}, audios={}, audio_sampling_rate=22050):
